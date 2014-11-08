@@ -7,7 +7,7 @@ Usage:
 
     kNearestStorable := knearest.NewKNearestStorable(11)
     for _, comparison := range values {
-      kNearest.Add(comparison)
+      kNearestStorable.Add(comparison)
     }
 
     kNearest := kNearestStorable.Get()
