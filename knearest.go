@@ -7,9 +7,9 @@ import (
 type Comparison int
 
 const (
-	lt Comparison = iota
-	gt
-	et
+	LT Comparison = iota
+	GT
+	ET
 )
 
 type Comparable interface {
@@ -37,7 +37,7 @@ type sliceKNearest struct {
 
 func (l *sliceKNearest) Add(s Comparable) {
 	i := sort.Search(len(l.currentNearest), func(i int) bool {
-		return s.Compare(l.currentNearest[i]) == lt
+		return s.Compare(l.currentNearest[i]) == LT
 	})
 
 	inserted := append(l.currentNearest[:i], append([]Comparable{s}, l.currentNearest[i:]...)...)
