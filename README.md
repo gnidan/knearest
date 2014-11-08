@@ -5,11 +5,13 @@ Go package for finding the k-nearest (or largest/smallest) values in a list.
 
 Usage:
 
-    kNearestStorable := knearest.NewKNearestStorable(11)
-    for _, comparison := range values {
-      kNearestStorable.Add(comparison)
-    }
+```go
+kNearestStorable := knearest.NewKNearestStorable(11)
+for _, comparison := range values {
+  kNearestStorable.Add(comparison)
+}
 
-    kNearest := kNearestStorable.Get()
+kNearest := kNearestStorable.Get()
+```
 
 
